@@ -3,8 +3,8 @@
 #   # Task goes here
 # end
 
-if defined?(RSpec)
-  require 'rspec/core/rake_task'
+require 'rspec/core/rake_task'
+require 'swagger_rails'
 
   desc 'Generate Swagger JSON files from integration specs'
   RSpec::Core::RakeTask.new('swaggerize') do |t|
