@@ -20,6 +20,7 @@ module SwaggerRails::RSpec
             @metadata[:http_verb] => operation_metadata
           }
         }
+        definitions: @metadata[:definitions] || {}
       }
     end
 
