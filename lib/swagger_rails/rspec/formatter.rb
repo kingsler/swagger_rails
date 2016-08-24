@@ -47,6 +47,7 @@ module SwaggerRails
               metadata[:http_verb] => operation_from(metadata)
             }
           }
+          definitions: metadata[:definitions] || {}
         }
       end
 

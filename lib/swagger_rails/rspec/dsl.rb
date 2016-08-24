@@ -11,6 +11,10 @@ module SwaggerRails
         describe(path_template, metadata, &block)
       end
 
+      def definitions(name, schema)
+        metadata[:definitions] = {name => schema}
+      end
+
       def operation(http_verb, summary=nil, &block)
         metadata = {
           http_verb: http_verb,
@@ -68,4 +72,3 @@ module SwaggerRails
     end
   end
 end
-
