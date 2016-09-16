@@ -12,7 +12,7 @@ module SwaggerRails
       end
 
       def definitions(name, schema)
-        metadata[:definitions] = {name => schema}
+        metadata.deep_merge!({ definitions: { name => schema } })
       end
 
       def operation(http_verb, summary=nil, &block)
