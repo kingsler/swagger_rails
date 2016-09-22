@@ -59,7 +59,7 @@ module SwaggerRails
           produces: metadata[:produces],
           parameters: metadata[:parameters],
           responses: { metadata[:response_code] => metadata[:response] }
-        }
+        }.reject{ |k,v| v.nil? }
       end
 
       def find_root_of(metadata)
